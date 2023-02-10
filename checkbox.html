@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=<device-width>, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        function fetch()
+        {
+            var selected_course="";
+            java=document.getElementById("java");
+            python=document.getElementById("python");
+            css=document.getElementById("css");
+
+            if(java.checked==true)
+            {
+                selected_course+="java";
+            }
+            if(python.checked==true)
+            {
+                selected_course+="python";
+            }
+            if(css.checked==true)
+            {
+                selected_course+="css";
+            }
+            document.getElementById("demo").innerHTML="you selected "+selected_course;
+        }
+    </script>
+</head>
+<body>
+    <form name="f1">
+        <input type="checkbox" name="c1" id="java" value="Java">Java<br>
+        <input type="checkbox" name="c2" id="python" value="Python">Python<br>
+        <input type="checkbox" name="c3" id="css" value="CSS">css<br>
+        <input type="button" value="submit" onclick="fetch();">
+    </form>
+    <p id="demo"></p>
+</body>
+</html>
